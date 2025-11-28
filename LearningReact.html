@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React And Redux</title>
+  </head>
+  <body>
+    <h1>JS vs React</h1>
+    <p>
+      JS is a programming language that is used to create dynamic and
+      interactive web pages. It is used to create the logic of web pages and is
+      often used in conjunction with HTML and CSS.
+    </p>
+    <p>
+      React on the other hand is a JavaScript library that is used to create
+      reusable UI components. It is used to create the structure of web pages
+      and is often used in conjunction with HTML and CSS.
+    </p>
+
+    <p>JS is imperative and React is declarative</p>
+    <p>JS is imperative : you define steps to reach your desire state</p>
+    <p>
+      React is declarative : you define what you want to see. you define the
+      target UI state and then react will take care of the rest
+    </p>
+
+    <h1>Introduction to components</h1>
+    <p>
+      React Application is a tree of components with App Component as the root
+      bringing everything together
+    </p>
+    <p>
+      Components are the building blocks of React. They are used to create
+      reusable UI elements. They are used to create the structure of web pages
+      and are often used in conjunction with HTML and CSS.
+    </p>
+    <p>react main fetures :</p>
+    <ul>
+      <li>Virtual DOM</li>
+      <li>Component Based</li>
+      <li>State</li>
+      <li>Props</li>
+      <li>Events</li>
+      <li>JSX</li>
+      <li>Hooks</li>
+      <li>Redux</li>
+      <li>Router</li>
+      <li>Testing</li>
+      <li>Deployment</li>
+      <li>Performance</li>
+    </ul>
+
+    <h1>JSX</h1>
+    <p>
+      JSX is a syntax extension for JavaScript that allows you to write HTML
+      elements in JavaScript. It is a way to add HTML elements to your React
+      components.
+    </p>
+    <h1>IDE stands for Integrated Development Environment.</h1>
+    <p>
+      An IDE is a software tool that provides a complete environment for
+      developers to work on their code. It includes features such as code
+      completion, syntax highlighting, debugging tools, version control, and
+      more.
+    </p>
+
+    <h1>Required tools</h1>
+    <ul>
+      <li>Node JS (LTS)</li>
+      <li>VS Code</li>
+      <li>Chrome</li>
+      <li>Git</li>
+    </ul>
+
+    <h1>VsCode Extensions and Settings</h1>
+    <ul>
+      <li>Live Server / Live Preview</li>
+      <li>Prettier(Format on save)</li>
+      <li>Select Formaat on save (in vs Code setting menu)</li>
+      <li>Select Line Wrap (in vs Code setting menu)</li>
+      <li>Tab Size from 4 to 2 (in vs Code setting menu)</li>
+    </ul>
+    <h1>Create a React App</h1>
+    <ol>
+      <li>Official tool is CRA (Create React APP</li>
+      <li>Vite is a modern tool to create React APP</li>
+      <li>Vite produces Quick and Small bundle size</li>
+      <li>Vite : Use npm run dev to launch dev server</li>
+      <li>Use npm start for CRA</li>
+    </ol>
+    <h1>Create a React App</h1>
+    <ul>
+      Open Terminal (npm - node package manager)
+    </ul>
+    <ol>
+      <li>npm create vite@latest my-app</li>
+      <li>cd my-app</li>
+      <li>npm install</li>
+      <li>npm run dev</li>
+    </ol>
+    <ul>
+      <li><h1>File Extensions</h1></li>
+      <ul>
+        <li>.js</li>
+        <ul>
+          <li>stand for JavaScript</li>
+          <li>COntains regular Javascript code</li>
+          <li>Used for general logic and components</li>
+        </ul>
+        <li>.jsx</li>
+        <ul>
+          <li>Stand for Javascript XML</li>
+          <li>Combines JavaScript with HTML-like tags</li>
+          <li>Makes it easier to design UI components</li>
+        </ul>
+        <li>.ts</li>
+        <li>.tsx</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Class vs Function Components</h1></li>
+      <ul>
+        <li>Class Component</li>
+        <ul>
+          <li>Stateful : can manage state</li>
+          <li>Lifecycle: Access to lifecycle methods</li>
+          <li>verbose: more boilerplate code.</li>
+          <li>Not recommended / Not preferred Now a days</li>
+        </ul>
+        <li>Function Component</li>
+        <ul>
+          <li>Initially STATELESS</li>
+          <li>can use Hooks for state and effects</li>
+          <li>Simpler and more concise</li>
+          <li>More Popular</li>
+        </ul>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>JSX</h1></li>
+      <ul>
+        <li>
+          JSX is a syntax extension for JavaScript that allows you to write HTML
+          elements in JavaScript.
+        </li>
+        <li>It is a way to add HTML elements to your React components.</li>
+        <li>
+          Definition: JSX determines how the UI will look whenever the component
+          is used.
+        </li>
+        <li>
+          Not HTML: though it resembles HTML, youre actually writing JSX, which
+          stands for JavaScript XML
+        </li>
+        <li>COnversion: JSX gets converted to regular JAvaScript</li>
+        <li>
+          Babeljs.io/repl is a tool that allows you to see how JSX is tranformed
+          into regular JavaScript
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Exporting Components</h1></li>
+      <ul>
+        <li>Enables the use of a component in another file</li>
+        <li>
+          Default export: Allows exporting a single component as the default
+          from a module
+        </li>
+        <li>
+          Named export: Allows exporting multiple components from a module
+        </li>
+        <li>
+          Importing : To use an exported component, you need to import it in the
+          destination file using Import symtax
+        </li>
+      </ul>
+    </ul>
+    <ul>
+      <li><h1>Other Important Points</h1></li>
+      <ul>
+        <li>
+          Naming : Must be capitalized; lowercase for default HTML. Naming in
+          PascalCase like KgButton for functional component.
+        </li>
+        <li>
+          HTML: unlike vanilla JS where you can't directly write HTML, in React,
+          you can embed HTML-like syntax using JSX
+        </li>
+        <li>
+          CSS : In React, CSS can be directly imported into component files,
+          allowing for modular and component-specific styling
+        </li>
+      </ul>
+    </ul>
+    <ul>
+      <h1>Dynamic Components</h1>
+      <ul>
+        <li>
+          Dynamic Content: JSX allows the creation of dynamic and inetractive UI
+          Component.
+        </li>
+        <li>
+          JavaScript Expressions: Using {}, we can embded any JS expression
+          directly within JSX. this includes variables, function calls, and
+          more.
+        </li>
+      </ul>
+    </ul>
+    <ul>
+      <li><h1>Reusable Components</h1></li>
+      <ul>
+        <li>
+          Modularity : Components can be reused across multiple parts of an app.
+          Components are modular, allowing for easy resuse across different
+          parts of an application
+        </li>
+        <li>
+          Consisetncy : Reusing components ensures UI consistency and reduce the
+          chances of discrepancies.
+        </li>
+        <li>
+          Efficiency : Reusing components can help optimize code and improve
+          performance. Reduces development time and effort by avoiding
+          duplication of code.
+        </li>
+        <li>
+          Maintainability : Reusing components makes it easier to maintain and
+          update code. Changes made to a resused component reflect everywhere
+          it's used, simplifying updates and bug fixes.
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Including Bootstrap</h1></li>
+      <ul>
+        <li>
+          <a href="https://getbootstrap.com/" target="_blank"
+            >Bootstrap Website</a
+          >
+        </li>
+        <li>
+          Responsive : Mobile-first design for all device sizes. Bootstrap
+          ensures a responsive layout that adapts to different screen sizes.
+        </li>
+        <li>Components: Pre-styled elements like buttons and navbars.</li>
+        <li>
+          Customization: Easy to customize colors, fonts, and more. Modify
+          default styles as needed.
+        </li>
+        <li>
+          Cross-browser compatibility: Bootstrap supports popular browsers like
+          Chrome, Firefox, Safari, and Edge. Consisetncy across different
+          browsers.
+        </li>
+        <li>
+          Open source: Bootstrap is an open source project, allowing for easy
+          customization and contribution.
+        </li>
+        <li>Install : npm i bootstrap@5.3.8 or npm i bootstrap@latest</li>
+        <li>import : import "bootstrap/dist/css/bootstrap.min.css";</li>
+      </ul>
+    </ul>
+    <ul>
+      <li><h1>Fragments</h1></li>
+      <ul>
+        What?
+        <ul>
+          <li>
+            Allows grouping of multiple elements without extra DOM nodes. Allows
+            grouping of multiple elements in a single JSX element
+          </li>
+        </ul>
+
+        Why?
+        <ul>
+          <li>
+            Fragments are useful when you need to return multiple elements from
+            a function
+          </li>
+          <li>Return multiple elements without wrapping parent.</li>
+          <li>Cleaner DOM and Consistent Structure</li>
+        </ul>
+        How?
+        <ul>
+          <li>Two ways to use fragments</li>
+          <ul>
+            <li>Using Short Syntax : &lt;&gt; ... &lt;/&gt;</li>
+            <li>Using Fragment : &lt;Fragment&gt;&lt;/Fragment&gt;</li>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Map Method</h1></li>
+      <ul>
+        <li>Purpose : Render listjs from array data.</li>
+        <li>JSX Elements: Transform array items into JSX.</li>
+        <li>
+          Inline Rendering: Directly inside JSX {items.map(item=&gt;&lt;li
+          key={item.id}&gt;{item.name}&lt;/li&gt;)}
+        </li>
+        <li>
+          Key Prop: Assign unique key for optiomized re-renders. &lt;div
+          key={item.id}&gt;{item.name}&lt;/div&gt;
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Conditional Rendering</h1></li>
+      <ul>
+        Conditional Rendering
+        <ul>
+          <li>
+            JSX Elements: Use JSX to conditionally render elements based on a
+            condition.
+          </li>
+          <li>Display contnt based on certain conditions.</li>
+          <li>Allows for dynamic user interfaces.</li>
+        </ul>
+        Methods:
+        <ul>
+          <li>if-else statement - Choose between two blocks of content</li>
+          <li>
+            ternary operator - Choose between two values based on a condition.
+            Quick way to choose between two options.
+          </li>
+          <li>
+            Logical Operators: Useful for rendering content when a condition is
+            true
+          </li>
+          <li>Logical && operator - Evaluate multiple conditions</li>
+          <li>Logical || operator - Evaluate multiple conditions</li>
+        </ul>
+        Benifits:
+        <ul>
+          <li>Cleaner and more readable code</li>
+          <li>Enhanced user experience</li>
+          <li>Reduces unnecessary code/rendering</li>
+          <li>Makes apps more interactive and responsive</li>
+        </ul>
+      </ul>
+    </ul>
+
+    <ul>
+      <li>
+        <h1>Passing Data via Props</h1>
+      </li>
+      <ul>
+        Props in react:
+        <ul>
+          <li>Short for properties</li>
+          <li>Used to pass data between components</li>
+          <li>Mechanism to share/pass data between components</li>
+          <li>Read only by default</li>
+        </ul>
+        Usage:
+        <ul>
+          <li>
+            Pass data from parent component to child component using props
+          </li>
+          <li>
+            Makes components reusable and modular. Pass data between components
+          </li>
+          <li>Define as attributes in JSX</li>
+        </ul>
+        Key Points:
+        <ul>
+          <li>Data flows one-way from parent to child(Downward Flow)</li>
+          <li>Props are read-only (Immutable)</li>
+          <li>Used for communication between components</li>
+        </ul>
+        Examples:
+        <ul>
+          &lt;Header title={title} /&gt;
+        </ul>
+        Props defin in javaScript & typeScript :
+        <ul>
+          <li>Props in javaScript : Object</li>
+          <li>Props in typeScript : Interface</li>
+        </ul>
+      </ul>
+    </ul>
+    <ul>
+      <li><h1>CSS Modules</h1></li>
+      <ul>
+        <li>Localized class Names to avoid global conflicts.</li>
+        <li>Styles are scoped to individual components.</li>
+        <li>Helps in creating component-specific styles.</li>
+        <li>Automatically generate unique class names.</li>
+        <li>Promotes modular and maintainable CSS.</li>
+        <li>Can use alongside global CSS when needed</li>
+        <li>
+          create same class name + . + module+ . + css like App.module.css
+        </li>
+        <li>
+          to see example check MyItem.jsx file there used MyItem.module.css file
+        </li>
+        <li style="color: blueviolet">
+          create style module for particular component
+        </li>
+        <li style="color: blueviolet">
+          that module import this way = import styles from
+          "./MyItem.module.css";
+        </li>
+        <li style="color: blueviolet">
+          that used this way = className={`${styles["kg-item"]}
+          list-group-item`}
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Passing Children</h1></li>
+      <ul>
+        <li>children is a special prop for passing elements into component</li>
+        <li>Used for flexible and reusable components designs</li>
+        <li>Common in layout or container components</li>
+        <li>Accessed using props.children</li>
+        <li>Can be an array or a single element</li>
+        <li>can be any content: string, number, JSX, or components.</li>
+        <li>Enhanced component composability and reusability</li>
+        <li style="color: blueviolet">
+          Check demo in this project: class name is Container.jsx how its used
+          check FoodApp.jsx
+        </li>
+        <li>Example : &lt;Container&gt;{children}&lt;/Container&gt;</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Handling Events</h1></li>
+      <ul>
+        <li>React events use camelCase , e.g., onClick.</li>
+        <li>Uses synthentic events, not direct browser events.</li>
+        <li>Event handlers can be functions or arrow functions.</li>
+        <li>Use event.preventDefault() to prevent default behavior.</li>
+        <li>Use onChange for controlled form inputs.</li>
+        <li>Avoid inline arrow functions in JSX for performance</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Passing Functions via Props</h1></li>
+      <ul>
+        <li>Pass functions as props to child components</li>
+        <li>Pass dynamic behaviour between components</li>
+        <li>Enables upward comminication from child to parent.</li>
+        <li>Commonly used for event handling</li>
+        <li>Parent defines a function, child invokes it.</li>
+        <li>Enhances component interactivity.</li>
+        <li>Example: &lt;Button onClick={handleClick}/&gt;</li>
+        <li>Implement Example in FoodApp.jsx</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Managing State</h1></li>
+      <ul>
+        <li>
+          State represents data that changes over time and affects the behavior
+          of a component.
+        </li>
+        <li>State is managed using the useState hook.</li>
+        <li>State is a primitive value that can be updated.</li>
+        <li>State is local and private to the component.</li>
+        <li>State changes trigger a re-render of the component.</li>
+        <li>For functional components, use useState hook</li>
+        <li>React Functions that start with word "use" are called hooks</li>
+        <li>Hooks should only be used inside component</li>
+        <li>
+          Parent components can pass down state to child components as props
+        </li>
+        <li>
+          Lifting state up : share state between components by moving it to
+          their closest common ancestor
+        </li>
+      </ul>
+    </ul>
+    <ul>
+      <li><h1>State</h1></li>
+      <ul>
+        <li>Local and mutable data within a component</li>
+        <li>Initialized using useState hook</li>
+        <li>Used to manage component-specific data</li>
+        <li>Initilized within a component</li>
+        <li>can changed over a time</li>
+        <li>Causes a re-render when updated</li>
+        <li>Managed using useState hook in functional components</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Props</h1></li>
+      <ul>
+        <li>Data passed from parent to child components</li>
+        <li>Passed into a component from its parent</li>
+        <li>read-only (immutable) within the receiving component</li>
+        <li>Allow parent-to-child component communication</li>
+        <li>Chnages in props can also cause a re-render</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>State vs Props</h1></li>
+      <ul>
+        <li>State is used to manage component-specific data.</li>
+        <li>Props are used to pass data from parent to child components.</li>
+        <li>State is local to the component, props are inherited.</li>
+        <li>State is mutable, props are immutable.</li>
+        <li>
+          State is used to manage local data within a component, props are used
+          to pass data from parent to child components.
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>React-Icon-Library</h1></li>
+      <ul>
+        <li>You can use a lot of icons without managing them.</li>
+        <li style="color: red">
+          Install package : npm install react-icons -save
+        </li>
+        <li>Use Icon: import {IconName} from 'react-icons/fc'</li>
+        <li>
+          <a href="https://react-icons.github.io/react-icons/" target="_blank"
+            >Visit React Icons</a
+          >
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li>
+        <h1>
+          Inspecting with React Devloper Tools
+          <span style="color: red">(this is a chrome extension)</span>
+        </h1>
+      </li>
+      <ul>
+        <!-- <li>Inspection : npm install --save-dev react-devtools</li>
+        <li>Run : npx react-devtools</li> -->
+        <li>Inspectiong: Allows inspection of React component hierarchy</li>
+        <li>
+          State & Props: View and edit the current state and props of a
+          component
+        </li>
+        <li>
+          Performance: Analyze component re-render and performance bottleneck
+        </li>
+        <li>
+          Navigation: Conveniently navigate through the entire component tree.
+        </li>
+        <li>
+          Filtering: Filter components by name or source to locate them quickly.
+        </li>
+        <li>
+          Real-time feedback: see live changes as you modify state or props.
+        </li>
+        <li>
+          <a
+            href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+            target="_blank"
+            >Visit React Devloper Tools</a
+          >
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>How React Works</h1></li>
+      <ul>
+        <li>Root Component</li>
+        <ul>
+          <li>The App is the main or root component of a React application</li>
+          <li>it's the starting point of your React Component tree</li>
+        </ul>
+        <li>Virtual DOM</li>
+        <ul>
+          <li>
+            React Creates an in-memory structure of your components called the
+            Virtual DOM
+          </li>
+          <li>Different from the actual browser DOM</li>
+          <li>
+            The Virtual DOM is a JavaScript object representation of the HTML
+          </li>
+          <li>The Virtual DOM is used by React to efficiently update the UI</li>
+          <li>It's a lightweight representation of the actual DOM</li>
+          <li>
+            it's a lightweight representation where each node stands for a
+            component and its attributes
+          </li>
+        </ul>
+        <li>Reconciliation Process</li>
+        <ul>
+          <li>
+            When component data changes, React updates the virtual DOM's state
+            to mirror these changes
+          </li>
+          <li>
+            React then compares the current and previous version of the virtual
+            DOM
+          </li>
+          <li>If there are any differences, React updates the actual DOM</li>
+          <li>it identifies the specific nodes that need updating.</li>
+          <li>
+            Only these nodes are updated in the real browser DOm, making it
+            efficient
+          </li>
+        </ul>
+        <li>React and ReactDOM</li>
+        <ul>
+          <li>
+            The actual updating of the browser's DOM isn't done by react itself
+          </li>
+          <li>it's handled by a companion library called ReactDOM</li>
+        </ul>
+        <li>Root Element</li>
+        <ul>
+          <li>
+            The root div acts as a container for all the components/React-app
+          </li>
+          <li>The script tag is where the react app starts executing.</li>
+          <li>
+            if you check main.jsx file, the component three is render inside
+            this root element/div
+          </li>
+        </ul>
+        <li>Strict Mode Component:</li>
+        <ul>
+          <li>it's a special component in React</li>
+          <li>it's used to detect potential problems in your application</li>
+          <li>Doesn't affect the behavior of your application</li>
+          <li>Dpesn't have a visual representation</li>
+          <li>its purpose is to spot potential issues in your application</li>
+        </ul>
+        <li>Plateform Independence</li>
+        <ul>
+          <li>React design allows it to be Plateform-agnostic</li>
+          <li>it can run on any platform</li>
+          <li>
+            While react-dom helps build web UIs using React, ReactNative can be
+            used to craft mobile app UIs
+          </li>
+        </ul>
+      </ul>
+    </ul>
+
+    <ul>
+      <li>
+        <h1>React Vs Angular vs Vue</h1>
+      </li>
+      <ul>
+        <li>React, Angular, and Vue:</li>
+        <ul>
+          <li>React is a library, while Angular and vue.js are frameworks.</li>
+          <li>Angular and Vue.js are built on top of React.</li>
+          <li>
+            React focuses on UI; Angular and Vue.js offer comprehensive tools
+            for full app development
+          </li>
+        </ul>
+        <li>Library vs. Framework:</li>
+        <ul>
+          <li>A library offers specific functionality.</li>
+          <li>
+            A framework provides a set of tools for building complex apps.
+          </li>
+          <li>A framework provides a set of tools and guidelines</li>
+          <li>
+            In simpler terms: React is a tool; Angular and Vue.js are toolsets.
+          </li>
+        </ul>
+        <li>React's Speciality:</li>
+        <ul>
+          <li>React's main role is crafting dynamic, interactive UIS.</li>
+          <li>
+            it doesn't handle routing, HTTp calls, state management, and more
+          </li>
+        </ul>
+        <li>react's Flexibility:</li>
+        <ul>
+          <li>React doesn't dictate tool choice for other app aspects.</li>
+          <li>Devlopers pick what fits their project best.</li>
+        </ul>
+        <li>About Angular and Vue.js:</li>
+        <ul>
+          <li>
+            Angular, developed by Google, provides a robust framework with a
+            steep learning curve
+          </li>
+          <li>
+            Vue.js is known for its simplicity and ease of integration, making
+            it beginner friendly
+          </li>
+        </ul>
+        <li>
+          <a href="React_vs_Angular_vs_Vue.html" target="_blank"
+            >React vs Angular vs Vue</a
+          >
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Using Forms</h1></li>
+      <ul>
+        <li>
+          State management: Each input's state is stored in the component's
+          state
+        </li>
+        <li>handling Changes: use onChange to detect input changes.</li>
+        <li>
+          Submission: Utilize onSubmit for form submissions and prevent default
+          with event.preventDefault().
+        </li>
+        <li>
+          Validation: Implement custom validation or use third-party libraries.
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li>
+        <h1>
+          useRef (this is a hook) (simple note which one is start with use its
+          hook)
+        </h1>
+      </li>
+      <ul>
+        <li style="color: red">
+          useRef allows acess to DOM elements and retains mutable value without
+          re-renders.
+        </li>
+        <li>useRef returns a mutable ref object</li>
+        <li>Used with the ref attribute for direct DOM interactions</li>
+        <li>Can hold previous state or prop values</li>
+        <li>Not limited to DOM referemces; can hold any value</li>
+        <li>Refs can be passed as props also</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>useState vs useRef</h1></li>
+      useState
+      <ul>
+        <li style="color: red">
+          Syntax : const [value, setValue] = useState(initialValue);
+        </li>
+        <li>
+          useState is used to store and update values that change in the UI.
+        </li>
+        <li>When the state changes → the component re-renders.</li>
+        <li>
+          Mostly used for: input values, counters, toggles, API data, etc.
+        </li>
+      </ul>
+      useRef
+      <ul>
+        <li style="color: red">
+          Syntax: const refName = useRef(initialValue);
+        </li>
+        <li>
+          useRef is used to store a value that does NOT cause re-render when
+          changed.
+        </li>
+        <li>You can access DOM elements directly.</li>
+        <li>
+          You can store values like variables (timer ID, previous values, etc.)
+        </li>
+        <li>Updating .current does NOT re-render component</li>
+      </ul>
+      <ul>
+        <li><h3>useState = when changes should update the UI.</h3></li>
+        <li>
+          <h3>
+            useRef = when you want to store something without re-rendering OR
+            access DOM
+          </h3>
+        </li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li><h1>Update state from Previous State</h1></li>
+      <ul>
+        <li>
+          Spread Operator (...) : Use to maintain immutability when updating
+          arrays or objects.
+        </li>
+        <li>
+          Functional Updates in useState: Use (existingPosts)=&gt;
+          [...existingPosts, newPost] to avoid stale values during asynchronous
+          updates.
+        </li>
+        <li>Functional Update way is better than immutability.</li>
+        <li style="color: red">
+          When updating state based on the previous state, React recommends
+          using a functional update.
+        </li>
+        <li>here see use in App.jsx file there also explain some comments</li>
+      </ul>
+      <ul>
+        WHY NEED
+      </ul>
+      <ul>
+        <li>Because state updates in React are asynchronous.</li>
+        <li>That means setState may not immediately update the value.</li>
+        <li>
+          So if you depend on the old state value, use the functional update.
+        </li>
+      </ul>
+      <ul>
+        Syntax
+        <li>setState((prevValue) =&gt; { return prevValue + 1; });</li>
+      </ul>
+    </ul>
+
+    <ul>
+      <li>
+        <h1>Context API</h1>
+      </li>
+      <ul>
+        <li style="font-weight: 1000; color: red">
+          Context API is a way to share data between components without passing
+          props manually at every level.
+        </li>
+        <li>
+          Normally, you pass data like this: Parent → Child → GrandChild →
+          GreatGrandChild
+        </li>
+        <li>This is called prop drilling.</li>
+        <li>Context API helps you avoid this.</li>
+        <li>
+          Prop Drilling: Context API addresses prop drilling; component
+          composition is an atlernative.
+        </li>
+        <li>FOlder Setup: Use a store folder for context files.</li>
+        <li>
+          Initialization: Use React.createContext() with initial state and
+          export it.
+        </li>
+        <li>Provide: Implement with contextName.Provider in componnent</li>
+        <li>Acces Value: Use useContext(contextName) hook</li>
+        <li>Dynamic Data:Combine context value with state</li>
+        <li>Export Functions: Context can also export function for actions</li>
+        <li>
+          Logic Separation : This helps keep the UI and Business logic separate
+          from each
+        </li>
+        <ul>
+          <li><h1>Why use Context API?</h1></li>
+          <ul>
+            <li>
+              Use it when you have data that many components need, such as:
+            </li>
+            <li>User data (name, token, login status)</li>
+            <li>Theme (dark/light mode)</li>
+            <li>Language setting</li>
+            <li>Cart items</li>
+            <li>App settings</li>
+          </ul>
+          <li><h1>How Context API Works (3 Steps)</h1></li>
+          <ul>
+            <li style="font-weight: 1000; color: red">1. Create Context :</li>
+            <ul>
+              <li>import { createContext } from "react";</li>
+              <li>export const UserContext = createContext();</li>
+            </ul>
+            <li style="font-weight: 1000; color: red">
+              2. Provide Context (wrap parent)
+            </li>
+            <ul>
+              <li>import { UserContext } from "./UserContext";</li>
+              <li>
+                function App() <br />{ <br />return (
+                <br />&lt;UserContext.Provider value={{ name: "Bhavesh"
+                }}&gt;<br />
+                &lt;Home /&gt;<br />
+                &lt;/UserContext.Provider&gt; <br />);<br />
+                }<br />
+              </li>
+              <li>Here, value is the data shared.</li>
+            </ul>
+            <li style="font-weight: 1000; color: red">
+              3. Use Context (any child component)
+            </li>
+            <ul>
+              <li>
+                <br />
+                import { useContext } from "react"; <br />
+                import { UserContext } from "./UserContext";
+                <br />
+                <br />function Home() { <br />
+                const user = useContext(UserContext);
+                <br />
+                <br />
+                return &lt;h1&gt;Hello, {user.name}&lt;/h1&gt; ; <br />}
+              </li>
+              <li>👏 Now child components get data without props.</li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+    <ul>
+      <li>
+        <h1>Use Reducer Hook</h1>
+      </li>
+      <ul>
+        <li>
+          UseReducer hook is used to manage complex state in a component
+          efficiently.
+        </li>
+        <li>useReducer is a React hook used to manage complex state logic.</li>
+        <li>
+          useReducer is a hook in React that offer more control over state
+          operations comprare to useState, especially when the state logic is
+          complex
+        </li>
+        <li>It is an alternative to useState, useful when:</li>
+        <ul>
+          <li>State has multiple values/fields</li>
+          <li>State updates are complex</li>
+          <li>Actions describe what should happen</li>
+          <li>Many actions update the same state</li>
+          <li>You want to organize logic like Redux</li>
+          <li>Using Context API (Context + useReducer = mini Redux)</li>
+          <li>State updates are done by dispatching actions</li>
+        </ul>
+        <li>Basic Idea</li>
+        <ul>
+          <li>useReducer takes two things/component:</li>
+          <ul>
+            <li>
+              1️⃣ A reducer function - A pure function that takes the current
+              state and an action and return new state
+            </li>
+            <li>
+              2️⃣ An initial state : it's invoked as const[state, dispatch] =
+              useReducer(reducer, initialState);
+            </li>
+            <li>
+              Action- An object describing what happened, typically having a
+              type property
+            </li>
+            <li>It returns:</li>
+            <ul>
+              <li>state → current state</li>
+              <li>
+                dispatch → function to trigger actions - Actionas are dispatched
+                using the dispatch function, which invokes the reducer with the
+                current state and the given action
+              </li>
+            </ul>
+          </ul>
+        </ul>
+        <br />
+        <li>
+          Use Cases: Particularly useful for managing state in large components
+          or when the next state depends on the previous one.
+        </li>
+        <li>
+          Predictable State management: Due to its strict structure, it leads to
+          more predictable and maintainable state management
+        </li>
+        <br />
+        <li>Syntax</li>
+        <ul>
+          <li>const [state, dispatch] = useReducer(reducer, initialState);</li>
+        </ul>
+        <li>Reducer example:</li>
+        <ul>
+          <li>
+            <pre>
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+
+    case "decrement":
+      return { count: state.count - 1 };
+
+    default:
+      return state;
+  }
+}
+</pre
+            >
+          </li>
+        </ul>
+        <li>
+          <a href="useReducerExample.html" target="_blank"
+            >useReducer Example</a
+          >
+        </li>
+      </ul>
+      <ul>
+        <li style="color: red">
+          Different example of With useState (messy) and useReducer
+        </li>
+        <ul>
+          <li>With useState (messy)</li>
+          <ul>
+            <pre>
+const [name, setName] = useState("");
+const [age, setAge] = useState(0);
+const [isActive, setIsActive] = useState(false);
+</pre
+            >
+          </ul>
+          <li>With useReducer (clean)</li>
+          <ul>
+            <pre>
+const initialState = {
+    name: "",
+    age: 0,
+    isActive: false,
+};
+    </pre
+            >
+
+            <!-- Reducer Function -->
+            <pre>
+function reducer(state, action) {
+    return { 
+        ...state, 
+        [action.field]: action.value 
+    };
+}
+    </pre
+            >
+          </ul>
+          <li>🔥 Full Example: Counter with useReducer</li>
+          <ul>
+            <li>
+              <pre>
+                import { useReducer } from "react";
+
+                const initialState = { count: 0 };
+
+                function reducer(state, action) {
+                  switch (action.type) {
+                    case "increment":
+                      return { count: state.count + 1 };
+                    case "decrement":
+                      return { count: state.count - 1 };
+                    default:
+                      return state;
+                  }
+                }
+
+                function Counter() {
+                  const [state, dispatch] = useReducer(reducer, initialState);
+                
+                  return (
+                    &lt;&gt;
+                      &lt;h1&gt;Count: {state.count}&lt;/h1&gt;
+                      &lt;button onClick={() =&gt; dispatch({ type: "increment" })}&gt;+&lt;/button&gt;
+                      &lt;button onClick={() =&gt; dispatch({ type: "decrement" })}&gt;-&lt;/button&gt;
+                    &lt;/&gt;
+                  );
+                }
+
+                export default Counter;
+
+              </pre>
+            </li>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+  </body>
+</html>

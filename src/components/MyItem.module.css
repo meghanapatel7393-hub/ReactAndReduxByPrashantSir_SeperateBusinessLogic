@@ -1,0 +1,17 @@
+.kg-item {
+  background-color: antiquewhite;
+}
+
+.fd-row {
+  margin: 10px;
+}
+
+.kg-span {
+  font-weight: bold;
+  color: brown;
+}
+
+.button {
+  float: right;
+  min-width: 80px;
+}
