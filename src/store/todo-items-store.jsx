@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useCallback } from "react";
 import { useState, useReducer } from "react";
 
 // const TodoItemsContext = createContext([]); // this way also work but below way is better because its suggest auto complete during typing
@@ -37,7 +37,9 @@ const TodoItemsContextProvider = ({ children }) => {
     };
     dispatchTodoItem(newItemAction);
   };
-  const onDeleteItems = (name) => {
+  /* 
+ this method work fine but we see one more hook useCallBack - that hook used to prevent unnecessary re-renders and memorize the result of a function. this details explain in reactadvanced project
+ const onDeleteItems = (name) => {
     console.log(name);
 
     const deleteItemAction = {
@@ -45,7 +47,22 @@ const TodoItemsContextProvider = ({ children }) => {
       payload: { name: name },
     };
     dispatchTodoItem(deleteItemAction);
-  };
+  };*/
+
+  //here we set useCallBack hook to prevent unnecessary re-renders
+  const onDeleteItems = useCallback(
+    (name) => {
+      console.log(name);
+
+      const deleteItemAction = {
+        type: "DELETE_ITEM",
+        payload: { name: name },
+      };
+      dispatchTodoItem(deleteItemAction);
+    },
+    [dispatchTodoItem]
+  );
+
   return (
     <TodoItemsContext.Provider
       value={{
